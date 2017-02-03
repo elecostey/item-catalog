@@ -1,0 +1,84 @@
+body {
+    font-size: 16px;
+    margin-bottom: 70px;
+    color: rgba(36, 39, 39, 0.75);
+    background-color: #39D5D8;
+}
+
+header {
+
+    height: 100px;
+    background-color: rgba(81, 82, 84, 0.92);
+
+}
+h3 {
+    color: rgb(66, 68, 68);
+}
+
+.app_title {
+    font-size: 2.5em;
+    color: #39D5D8;
+    text-decoration: none;
+}
+
+.message {
+    padding: 0 15px 15px 15px;
+}
+
+.header_container {
+    padding: 30px 15px 30px 15px;
+}
+
+.button_container {
+    text-align: center;
+
+}
+
+.item_header {
+    color: rgb(66, 68, 68);
+}
+
+.item_container {
+    background-color: rgba(255, 255, 255, 0.32);
+    padding: 1px 10px 10px 10px;
+    margin-bottom: 4%;
+}
+
+.container {
+    display: flex;
+}
+
+@media screen and (min-width: 900px) {
+    .message,
+    .container,
+    .header_container,
+    .edit_container {
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.login_logout {
+    float: right;
+    font-size: 1.5em;
+    color: #39D5D8;
+    margin-top: 20px;
+}
+
+.categories {
+    margin-right: 5%;
+    background-color: rgba(255, 255, 255, 0.32);
+    padding: 0 25px 0 25px;
+    z-index: 10;
+
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.gif_container {
+    margin-left: -12%;
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='panda-catalog.css') }}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//apis.google.com/js/platform.js?onload=start" async defer> </script>
+	</head>
+	<body>
+
+  <header>
+    <div class="header_container">
+      <a class="app_title" href="{{url_for('showCategories')}}">Panda Sport</a>
+      {% if username == 'USER_NOT_LOGGED_IN' %}
+        <a class="login_logout" href="{{url_for('showLogin')}}">Login</a>
+      {% else %}
+        <a class="login_logout" href="{{url_for('disconnect')}}">Logout</a>
+      {% endif %}
+    </div>
+  </header>
+
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+	</body>
+</html>

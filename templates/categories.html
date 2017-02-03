@@ -1,0 +1,40 @@
+
+{% extends "main.html" %}
+{% block content %}
+
+  <div class="message">
+    <br>
+    <br>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <h4>{{ message }}</h4>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+<div class="container">
+  <div class="categories">
+      <h1 class="header">Categories</h1>
+
+      <a href="{{ url_for('newCategory')}}">Create New Category</a>
+
+      {% for category in categories %}
+      <div class="name">
+        <a class="name" href="{{ url_for('showItems', category_id=category.id)}}"><h3>{{category.name}}</h3></a>
+      </div>
+      {% endfor %}
+
+      <br>
+      <br>
+  </div>
+    <div class="gif_container">
+        <img src="https://d13yacurqjgara.cloudfront.net/users/870536/screenshots/3177260/final.gif">
+    </div>
+  
+</div>
+
+
+
+{% endblock %}
+

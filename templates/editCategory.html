@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content %}
+  <div class="edit_container">
+    <h1>Edit Category</h1>
+
+    <form action="{{ url_for('editCategory', category_id=category.id) }}" method="post">
+      <p>Name:</p>
+      <input type="text" size="30" name="name" value="{{ category.name }}">
+      <input type="submit" value="Edit">
+      <a href="{{ url_for('showCategories', category_id=category.id) }}">Cancel</a>
+    </form>
+  </div>
+{% endblock %}
