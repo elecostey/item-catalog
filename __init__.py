@@ -12,13 +12,14 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Category, Item, User
 import random
 import string
+import os
 app = Flask(__name__)
 
+path = os.path.dirname(__file__)
+CLIENT_ID = json.loads(open(path+'/client_secrets.json', 'r').read())['web']['client_id']
+#CLIENT_ID = json.loads(open('client_secrets.json', 'r').read())['web']['client_id']
 
-CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
-
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -51,7 +52,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(path+'/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
@@ -187,10 +188,10 @@ def fbconnect():
     access_token = request.data
     print "access token received %s " % access_token
 
-    app_id = json.loads(open('fb_client_secrets.json', 'r').read())[
+    app_id = json.loads(open(path+'/fb_client_secrets.json', 'r').read())[
         'web']['app_id']
     app_secret = json.loads(
-        open('fb_client_secrets.json', 'r').read())['web']['app_secret']
+        open(path+'/fb_client_secrets.json', 'r').read())['web']['app_secret']
     url = 'https://graph.facebook.com/oauth/access_token?' \
           'grant_type=fb_exchange_token&' \
           'client_id=%s&client_secret=%s&fb_exchange_token=%s' % (
