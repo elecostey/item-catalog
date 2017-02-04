@@ -113,16 +113,16 @@ APACHE INSTALLATION
 
 PYTHON INSTALLATION
 -------------------------------------------------------------------------------
- - `apt-get install python-pip`
- - `pip install virtualenv`
- - `virtualenv venv` 
- - `chmod -R 777 venv`
- - `pip install Flask-Seasurf`
- - `pip install requests`
- - `pip install --upgrade oauth2client`
- - `pip install sqlalchemy`
- - `apt-get install python-psycopg2`
- - `pip install bleach`
+ - `sudo apt-get install python-pip`
+ - `sudo pip install virtualenv`
+ - `sudo virtualenv venv` 
+ - `sudo chmod -R 777 venv`
+ - `sudo pip install Flask-Seasurf`
+ - `sudo pip install requests`
+ - `sudo pip install --upgrade oauth2client`
+ - `sudo pip install sqlalchemy`
+ - `sudo apt-get install python-psycopg2`
+ - `sudo pip install bleach`
 
 POSTGRES INSTALLATION
 -------------------------------------------------------------------------------
@@ -154,7 +154,7 @@ POSTGRES INSTALLATION
 
 GIT INSTALLATION, PROJECT CLONE & DATABASE POPULATING
 -------------------------------------------------------------------------------
- - `apt-get install git`
+ - `sudo apt-get install git`
  - `git config --global user.name "Elodie Lecostey"`
  - `git config --global user.email "lecostey.e@gmail.com"`
  - `git config --list` to be sure
