@@ -40,8 +40,13 @@ USER CREATION & SUDO RIGHTS
 -  give our hero a password
 - `nano /etc/sudoers`
 - `touch /etc/sudoers.d/grader`
-- `nano /etc/sudoers.d/grader`, type in `grader ALL=(ALL:ALL) ALL`
+- `nano /etc/sudoers.d/grader`, type in `grader ALL=(ALL:ALL) PASSWD: ALL`
 - `CTRL + O` confirm save and exit with `CTRL + X`
+
+- DISABLE SSH LOGIN FOR ROOT USER
+- `sudo nano /etc/ssh/sshd_config`
+- Set `PermitRootLogin` from `without-password` to `no`
+- restart the service with `/etc/init.d/sshd restart`
 
 SSH LOGIN SETUP
 -------------------------------------------------------------------------------
@@ -80,6 +85,9 @@ FIREWALL CONFIGURATION
 -------------------------------------------------------------------------------
 - Initially check the status with `ufw status` 
 
+ - `ufw status`
+ -  We need to remove SSH 22 port that is allowed by default
+ - `ufw delete allow 22`
  - `ufw allow 2200/tcp`
  - `ufw allow 80/tcp`
  - `ufw allow 123/udp`
