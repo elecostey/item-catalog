@@ -5,7 +5,7 @@ GENERAL USAGE NOTES
  - The purpose of this project is to setup a Linux virtual machine Configuration
   to support the Item Catalog website.
 
- - The website can be reviewed at http://52.26.162.36 .
+ - The website can be reviewed at http://50.112.41.253 .
 
 REQUIREMENTS
 -------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ LAUNCH THE VIRTUAL MACHINE
  - restrict the key access
  - `chmod 644 ~/.ssh/udacity_key.rsa`
  -  SSH into the server
- - `ssh -i ~/.ssh/udacity_key.rsa root@52.26.162.36`
+ - `ssh -i ~/.ssh/udacity_key.rsa root@50.112.41.253`
 
 USER CREATION & SUDO RIGHTS
 -------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ SSH LOGIN SETUP
 - reload SSH using `service ssh restart`
 - SSH login is now available
 
-	`ssh -i [privateKeyFilename] grader@52.26.162.36`
+	`ssh -i [privateKeyFilename] grader@50.112.41.253`
 
 
 UPDATE ALL CURRENTLY INSTALLED PACKAGES
@@ -174,7 +174,7 @@ PREPARE OUR APP TO RUN WITH APACHE - VIRTUAL HOST
 	
 	```
 	<VirtualHost *:80>
-		ServerName 52.26.162.36
+		ServerName 50.112.41.253
 		ServerAdmin lecostey.e@gmail.com
 		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
@@ -214,7 +214,7 @@ PREPARE OUR APP TO RUN WITH APACHE - VIRTUAL HOST
 	```
 
 - Finally Restart Apache `sudo service apache2 restart`
-- Project can now be accessed on http://52.26.162.36
+- Project can now be accessed on http://50.112.41.253
 
 ERRORS 
 -------------------------------------------------------------------------------
