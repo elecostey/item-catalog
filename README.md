@@ -116,13 +116,13 @@ POSTGRES INSTALLATION
 - Fetch PostgreSQL `sudo apt-get install postgresql`
 - Switch to "postgres" `sudo su postgres`
 - Start the postgreSQL shell `psql`
-- Create a new database named catalog and create a new user named catalog through postgreSQL shell
+- Create a new database named "catalog" and create a new user named "catalog" through postgreSQL shell
 	
 	```
 	postgres=# CREATE DATABASE catalog;
 	postgres=# CREATE USER catalog;
 	```
-- Assign a password to the user catalog
+- Assign a password to the user "catalog"
 	
 	```
 	postgres=# ALTER ROLE catalog WITH PASSWORD 'catalog';
