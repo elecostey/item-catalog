@@ -223,4 +223,4 @@ CONTACT
 -------------------------------------------------------------------------------
 Author: Elodie Lecostey
 E-mail: elodie_lecostey@hotmail.com
-Github: https://github.com/elecostey/Udacity/tree/master/itemCatalog
+Github: https://github.com/elecostey/item-catalog
