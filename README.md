@@ -1,4 +1,4 @@
-My Linux Server Configuration project version 1.0.0 04/02/2017
+My Linux Server Configuration project version 1.0.1 04/02/2017
 
 GENERAL USAGE NOTES
 -------------------------------------------------------------------------------
@@ -95,6 +95,10 @@ FIREWALL CONFIGURATION
  - `ufw enable`
  - `service ufw restart`
  - `exit` (Log off)
+ 
+ - test the new setup by logging in
+ - `ssh -i ~/.ssh/grader grader@50.112.41.253 -p 2200`
+ - enter private key password when prompted (not grader password)
 
 UTC CONFIGURATION
 -------------------------------------------------------------------------------
