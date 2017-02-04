@@ -37,6 +37,7 @@ USER CREATION & SUDO RIGHTS
 - Create a new user named grader
 
 - `sudo adduser grader`
+-  give our hero a password
 - `nano /etc/sudoers`
 - `touch /etc/sudoers.d/grader`
 - `nano /etc/sudoers.d/grader`, type in `grader ALL=(ALL:ALL) ALL`
