@@ -86,8 +86,9 @@ FIREWALL CONFIGURATION
 - Initially check the status with `ufw status` 
 
  - `ufw status`
- -  We need to remove SSH 22 port that is allowed by default
- - `ufw delete allow 22`
+ -  We need to change SSH 22 port to 2200
+ -  navigate to `sudo nano /etc/ssh/sshd_config` and change port 22 to 2200
+ -  apply the new port switch `sudo /etc/init.d/ssh restart`
  - `ufw allow 2200/tcp`
  - `ufw allow 80/tcp`
  - `ufw allow 123/udp`
